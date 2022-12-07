@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .main__background {
@@ -9,4 +15,20 @@
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    pointer-events: none;
 }
+
+.containter {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.newYearTimer {
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+}
+
+
