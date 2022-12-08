@@ -27,9 +27,14 @@ body {
 }
 
 .newYearTimer {
-    font-size: 50px;
+    font-size: 140px;
     color: white;
     font-weight: 700;
+    display: flex;
+    margin-top: 130px;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 3px 3px #000;
 }
 
 

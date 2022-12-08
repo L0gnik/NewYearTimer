@@ -1,12 +1,25 @@
+    const newYearTimer = document.getElementsByClassName('newYearTimer')[0];
 
-    let timeNow = new Date().getTime();
-    const countDownDate = new Date("Jun 1, 2023 0:00:00").getTime();
-    let timeLeft = countDownDate - timeNow;
-    let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24))
-    
-    var myfunc = setInterval(function () {
+
+    const getCountUpTimer = (date, element) => {
+
+        const countUpDate = new Date(date).getTime(); 
+
+        setInterval(function () {
        
-        console.log(document.getElementsByClassName('newYearTimer'));
-        
-    }, 1000)
-    document.getElementsByClassName('newYearTimer').innerHTML = days + 'd'
+            let timeNow = new Date().getTime();
+            let timeLeft = countUpDate - timeNow;
+    
+            let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24))
+            let hours = Math.floor(timeLeft % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+            let min = Math.floor(timeLeft % (1000 * 60 * 60) / (1000 * 60))
+            let sec = Math.floor(timeLeft % (1000 * 60) / (1000))
+    
+            element.textContent = `${days}d ${hours}h ${min}m ${sec}s`
+    
+        }, 1000)
+
+    }
+
+    getCountUpTimer("Jan 1, 2023 00:00:00", newYearTimer)
+
