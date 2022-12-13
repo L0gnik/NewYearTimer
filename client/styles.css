@@ -9,6 +9,7 @@
 
 body {
     font-family: 'Zen Dots', cursive;
+    color: white;
 }
 
 .main__background {
@@ -21,20 +22,33 @@ body {
     pointer-events: none;
 }
 
-.containter {
-    max-width: 1400px;
+.container {
+    max-width: 1600px;
     margin: 0 auto;
+}
+
+.timer-content {
+    font-size: 140px;
+    margin-top: 250px;
+    font-weight: 700;
+    text-shadow: 1px 3px 3px #000;
+    text-align: center;
 }
 
 .newYearTimer {
     font-size: 140px;
-    color: white;
     font-weight: 700;
     display: flex;
-    margin-top: 130px;
     justify-content: center;
     text-align: center;
     text-shadow: 1px 3px 3px #000;
 }
 
 
+@media (max-width: 768px) {
+
+    .timer-content {
+        color: black;
+    }
+
+}
